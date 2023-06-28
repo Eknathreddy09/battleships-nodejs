@@ -1,9 +1,9 @@
-SOURCE_IMAGE = os.getenv("SOURCE_IMAGE", default='dev.local/battleship-source')
+SOURCE_IMAGE = os.getenv("SOURCE_IMAGE", default='dev.local/battleship-inner-source')
 LOCAL_PATH = os.getenv("LOCAL_PATH", default='.')
 NAMESPACE = os.getenv("NAMESPACE", default='default')
 
 k8s_custom_deploy(
-    'battleship',
+    'battleship-inner',
     apply_cmd="tanzu apps workload apply -f config/workload.yaml --update-strategy replace --debug --live-update" +
                " --local-path " + LOCAL_PATH +
                " --source-image " + SOURCE_IMAGE +
@@ -17,5 +17,5 @@ k8s_custom_deploy(
     ]
 )
 allow_k8s_contexts('tap-iterate-cluster')
-k8s_resource('battleship', port_forwards=["8080:8080"],
-            extra_pod_selectors=[{'carto.run/workload-name': 'battleship', 'app.kubernetes.io/component': 'run'}])
+k8s_resource('battleship-inner', port_forwards=["8080:8080"],
+            extra_pod_selectors=[{'carto.run/workload-name': 'battleship-inner', 'app.kubernetes.io/component': 'run'}])
