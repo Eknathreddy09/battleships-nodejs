@@ -1,7 +1,7 @@
 accelerator:
   displayName: Battleshipapp
   description: App for workshop exercise
-  iconUrl: https://raw.githubusercontent.com/dineshtripathi30/icons/master/2438322212642_50d4be51a586eb0dc065_132.png
+  iconUrl: https://raw.githubusercontent.com/Eknathreddy09/battleships-nodejs/master/battleship-1.png
   tags:
   - node
   - tanzu
