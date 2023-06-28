@@ -1,0 +1,16 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: battleship-app
+  description: App for workshop exercise
+  tags:
+    - app-accelerator
+    - node
+    - express
+    - tanzu
+  annotations:
+    'backstage.io/kubernetes-label-selector': 'app.kubernetes.io/part-of=battleship-nodejs'
+spec:
+  type: service
+  lifecycle: experimental
+  owner: default-team
