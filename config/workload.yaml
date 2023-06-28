@@ -1,7 +1,7 @@
 apiVersion: carto.run/v1alpha1
 kind: Workload
 metadata:
-  name: battleship
+  name: battleship-inner
   namespace: default
   labels:
     apps.tanzu.vmware.com/workload-type: web
