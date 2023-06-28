@@ -24,9 +24,6 @@ accelerator:
   - name: message
     inputType: textarea
     display: true
-    defaultValue: |
-      hello
-      tanzu
   - name: includeTap
     label: "Include TAP deployment resources?"
     inputType: checkbox
